@@ -10,7 +10,7 @@
 <body>
     <div>
         <form id="adminform">
-            <label for="cars">Choose Category</label>
+            <label for="rooms">Choose Category</label>
             <br>
             <select name="rooms" id="rooms">
               <option value="family">Family</option>
@@ -40,16 +40,23 @@
             <br>
             <input type="number" id="cost" placeholder=" Cost per night"/>
             <br>
-            <input type="submit" onclick="postData()" value="Submit" id="s2"/>
+            <input type="submit"  value="Submit" id="s2"/>
            </form>
+    </div>
+    <div>
+        <table>
+            <thead>
+                <tr></tr>
+            </thead>
+        </table>
     </div>
 </body>
 </html>
 <script>
-    var api = "https://hotel-manage1.herokuapp.com/data";
+    const api = "https://hotel-manage1.herokuapp.com/api/data";
 
     let form = document.getElementById("adminform");
-    //form.addEventListener("submit", postData);
+    form.addEventListener("s2", postData);
 
     function postData(e){
         e.preventDefault();
@@ -70,12 +77,17 @@
             maxcapacity,
             price
         }
-//console.log(obj)
+console.log(obj)
 
      fetch(api,{
         "method":"POST",
         "body": JSON.stringify(obj),
         "headers": {"content-type": "application/json"}
      }).then(res => console.log(res))
+    }
+
+
+    function fetchData(){
+        fetch(api).then(res => res.json()).then(res => console.log(res));
     }
 </script>

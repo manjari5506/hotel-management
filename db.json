@@ -1,6 +1,55 @@
 {
     "data": [
-        
+        {
+            "category": "family",
+            "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9iwBm2ulky9tQ2IHs-goDmQRaFeC5UixjR4_lY6SDN-iWJ4xl_O3A4-XMzXDhuc0zWx0&usqp=CAU",
+            "type_of_room": "suite",
+            "bed_type": "double",
+                "no_of_persons":"2",
+                "capacity":"3",
+                "cost":"3000",
+                "booked":false
+        },
+        {
+            "category": "family",
+            "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9iwBm2ulky9tQ2IHs-goDmQRaFeC5UixjR4_lY6SDN-iWJ4xl_O3A4-XMzXDhuc0zWx0&usqp=CAU",
+            "type_of_room": "suite",
+            "bed_type": "double",
+                "no_of_persons":"2",
+                "capacity":"3",
+                "cost":"3000",
+                "booked":false
+        },
+        {
+            "category": "family",
+            "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9iwBm2ulky9tQ2IHs-goDmQRaFeC5UixjR4_lY6SDN-iWJ4xl_O3A4-XMzXDhuc0zWx0&usqp=CAU",
+            "type_of_room": "suite",
+            "bed_type": "double",
+                "no_of_persons":"2",
+                "capacity":"3",
+                "cost":"3000",
+                "booked":false
+        },
+        {
+            "category": "family",
+            "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9iwBm2ulky9tQ2IHs-goDmQRaFeC5UixjR4_lY6SDN-iWJ4xl_O3A4-XMzXDhuc0zWx0&usqp=CAU",
+            "type_of_room": "suite",
+            "bed_type": "double",
+                "no_of_persons":"2",
+                "capacity":"3",
+                "cost":"3000",
+                "booked":false
+        },
+        {
+            "category": "family",
+            "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9iwBm2ulky9tQ2IHs-goDmQRaFeC5UixjR4_lY6SDN-iWJ4xl_O3A4-XMzXDhuc0zWx0&usqp=CAU",
+            "type_of_room": "suite",
+            "bed_type": "double",
+                "no_of_persons":"2",
+                "capacity":"3",
+                "cost":"3000",
+                "booked":false
+        }
     ],
     "users": [
        
