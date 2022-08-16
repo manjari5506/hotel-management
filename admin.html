@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css" />
+</head>
+<body>
+    <div>
+        <form id="adminform">
+            <label for="cars">Choose Category</label>
+            <br>
+            <select name="rooms" id="rooms">
+              <option value="family">Family</option>
+              <option value="deluxe">Deluxe</option>
+              <option value="suite">Suite</option>
+            </select>
+            <br>
+            <input type="text" id="img" placeholder="image of room"/>
+            <br>
+
+            <input type="radio" id="ac" name="ac" value="AC">
+            <label for="ac">AC Room</label><br>
+            <input type="radio" id="non" name="non" value="non">
+            <label for="non">Non AC Room</label>
+            <br>
+
+            <label for="cars">Choose type of bed</label>
+            <br>
+            <select name="bed" id="bed">
+                <option value="single">Single</option>
+                <option value="double">Double</option>
+              </select>
+            <br>
+            <input type="number" id="nofadult" placeholder="Number of adults"/>
+            <br>
+            <input type="number" id="maxcapacity" placeholder="Maximum capacity"/>
+            <br>
+            <input type="number" id="cost" placeholder=" Cost per night"/>
+            <br>
+            <input type="submit" value="Submit" id="s2"/>
+           </form>
+    </div>
+</body>
+</html>
+<script>
+    var api = "https://hotel-manage1.herokuapp.com/api/data";
+
+    let form = document.getElementById("adminform");
+    form.addEventListener("submit", postData);
+
+    function postData(e){
+        e.preventDefault();
+        let category = form.elements[0].value;
+        let image = form.elements[1].value;
+        let type = form.elements[2].value;
+        let bed = form.elements[3].value;
+        let adults = form.elements[4].value;
+        let maxcapacity= form.elements[5].value;
+        let price = form.elements[6].value;
+  
+        var obj = {
+            category,
+            image,
+            type,
+            bed,
+            adults,
+            maxcapacity,
+            price
+        }
+
+    }
+</script>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css" />
+</head>
+<body>
+    <div id="main">
+        <div id="loginbutt">
+        <button onclick="login()" id="loginb">Login</button>
+        <button onclick="register()" id="signupb">Register</button>
+        </div>
+        <div id="main2">
+           <form id="form1">
+            <input type="email" id="email" placeholder="email"/>
+            <br>
+            <input type="password" id="password" placeholder="password"/>
+            <br>
+            <input type="submit" onclick="submit1()" value="Login" id="s2" />
+           </form>
+        </div>
+        <div id="main3">
+            <form id="form2">
+             <input type="text" id="name" placeholder="username"/>
+             <br>
+             <input type="email" id="email1" placeholder="email"/>
+             <br>
+             <input type="password" id="password1" placeholder="password"/>
+             <br>
+             <input type="password" id="password2" placeholder="repeat password"/>
+             <br>
+             <input type="submit" onclick="submit2()" value="Register" id="s2"/>
+            </form>
+         </div>
+    </div>
+</body>
+</html>
+<script>
+    function login(){
+        let login = document.getElementById("main2");
+        let register = document.getElementById("main3");
+        login.style.display = "block";
+
+        register.style.display = "none";
+        let signupb = document.getElementById("signupb")
+        signupb.style.backgroundColor = "white";
+        signupb.style.color = "black";
+
+        let loginb = document.getElementById("loginb");
+        loginb.style.backgroundColor = "rgb(44, 43, 43)";
+        loginb.style.color = "white";
+
+    }
+    function register(){
+        let login = document.getElementById("main2");
+        let register = document.getElementById("main3");
+        register.style.display = "block";
+
+        login.style.display = "none";
+        let loginb = document.getElementById("loginb");
+        loginb.style.backgroundColor = "white";
+        loginb.style.color = "black";
+
+        let signupb = document.getElementById("signupb")
+        signupb.style.backgroundColor = "rgb(44, 43, 43)";
+        signupb.style.color = "white";
+
+    }
+
+    var arr1 = JSON.parse(localStorage.getItem("sign")) || [];
+    function submit1(){
+        event.preventDefault();
+        var obj1 = {
+            email : document.getElementById("email").value,
+            password : document.getElementById("password").value
+        }
+        if(obj1[email] == "admin@gmail.com" && obj1[password] == "masai"){
+          alert("Admin login successful");
+          window.location.href("admin.html");
+        }
+        arr1.push(obj1);
+        console.log(arr1);
+        alert("login successful");
+
+        localStorage.setItem("sign",JSON.stringify(arr1));
+    }
+
+    var arr2 = JSON.parse(localStorage.getItem("sign2")) || [];
+    function submit2(){
+        event.preventDefault();
+        var obj2 = {
+            name: document.getElementById("name").value,
+            email : document.getElementById("email").value,
+            password : document.getElementById("password").value
+        }
+        arr2.push(obj2);
+        console.log(arr2);
+        alert("Signup successful");
+
+        localStorage.setItem("sign2",JSON.stringify(arr2));
+    }
+</script>

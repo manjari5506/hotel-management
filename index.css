@@ -1,0 +1,64 @@
+body{
+    background-color: rgb(59, 57, 57);
+}
+#main{
+    width: 35%;
+    height: fit-content;
+    margin: auto;
+    margin-top: 100px;
+    padding: 20px;
+    background-color: rgb(44, 43, 43);
+}
+#loginbutt{
+    display: flex;
+}
+#loginbutt > button{
+    width: 50%;
+    height: 50px;
+    background-color: rgb(44, 43, 43);
+    color: white;
+    border: none;
+    border-radius: 10px;
+}
+#main2{
+    display: none;
+    border-radius: 10px;
+}
+#form1 > input{
+    width: 90%;
+    margin: auto;
+    padding: 7px;
+   margin: 10px;
+}
+#form2 > input{
+    width: 90%;
+    margin: auto;
+    padding: 7px;
+   margin: 10px;
+}
+#main3{
+    display: none;
+    border-radius: 10px;
+}
+#s2{
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(71, 71, 212);
+    color: white;
+    border: none;
+}
+#adminform{
+    width: 35%;
+    height: fit-content;
+    margin: auto;
+    margin-top: 100px;
+    padding: 20px;
+    color: white;
+    background-color: rgb(44, 43, 43);
+}
+#adminform > input{
+    width: 90%;
+    margin: auto;
+    padding: 7px;
+   margin: 10px;
+}
