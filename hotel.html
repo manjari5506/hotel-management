@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css" />
+</head>
+<body>
+    <div id="container">
+        
+    </div>
+</body>
+</html>
+<script>
+ var api = "https://hotel-manage1.herokuapp.com/api/data";
+fetchData();
+
+function fetchData(){
+    fetch(api).then(res => res.json()).then(res => displayData(res));
+   // console.log(res)
+}
+function displayData(data){
+     var container = document.getElementById("container");
+     
+       data.map((e)=>{
+
+        let card = document.createElement("div");
+        card.setAttribute("id","card")
+
+          let right = document.createElement("div");
+          right.setAttribute("id","right");
+          let left = document.createElement("div");
+          left.setAttribute("id","left");
+
+          let img = document.createElement("img");
+          img.setAttribute("src", e.image_url);
+
+          let h1 = document.createElement("h1");
+          h1.innerHTML = e.category + "Room";
+
+          let p1 = document.createElement("p");
+          p1.innerHTML ="Adults: " + e.no_of_persons;
+          let p2 = document.createElement("p");
+          p2.innerHTML = "Capacity: " + e.capacity;
+          let p3 = document.createElement("p");
+          p3.innerHTML ="Facilities:  Closet, HD-TV";
+          let p4 = document.createElement("p");
+          p4.innerHTML ="Bed Type" + e.bed_type;
+          let p5 = document.createElement("p");
+          p5.innerHTML = "Price: " + e.cost + "/night";
+                   
+          let b = document.createElement("button");
+          b.innerHTML = "Book Now";
+
+          left.append(img);
+          right.append(h1,p1,p2,p3,p4,p5,b);
+         card.append(left,right);
+        container.append(card);
+       })
+}
+</script>

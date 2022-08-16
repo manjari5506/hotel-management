@@ -43,11 +43,24 @@
             <input type="submit"  value="Submit" id="s2"/>
            </form>
     </div>
-    <div>
+    <div id="display">
         <table>
             <thead>
-                <tr></tr>
+                <tr id="tr">
+                    <th >Category</th>
+                    <th>Image</th>
+                    <th>AC/Non</th>
+                    <th>Bed type</th>
+                    <th>No of adults</th>
+                    <th>Maximum</th>
+                    <th>Price</th>
+                    <th>Booked</th>
+
+                </tr>
             </thead>
+            <tbody id="tbody">
+
+            </tbody>
         </table>
     </div>
 </body>
@@ -61,21 +74,22 @@
     function postData(e){
         e.preventDefault();
         let category = form.elements[0].value;
-        let image = form.elements[1].value;
-        let type = form.elements[2].value;
-        let bed = form.elements[3].value;
-        let adults = form.elements[4].value;
-        let maxcapacity= form.elements[5].value;
-        let price = form.elements[6].value;
+        let image_url = form.elements[1].value;
+        let type_of_room = form.elements[2].value;
+        let bed_type = form.elements[3].value;
+        let no_of_persons = form.elements[4].value;
+        let capacity= form.elements[5].value;
+        let cost = form.elements[6].value;
   
         var obj = {
             category,
-            image,
-            type,
-            bed,
-            adults,
-            maxcapacity,
-            price
+            image_url,
+            type_of_room,
+            bed_type,
+            no_of_persons,
+            capacity,
+            cost,
+            booked: false
         }
 console.log(obj)
 
@@ -85,9 +99,32 @@ console.log(obj)
         "headers": {"content-type": "application/json"}
      }).then(res => console.log(res))
     }
-
+  
+    fetchData();
 
     function fetchData(){
-        fetch(api).then(res => res.json()).then(res => console.log(res));
+        fetch(api).then(res => res.json()).then(res => displayData(res));
+       // console.log(res)
+    }
+    function displayData(data){
+       var tbody = document.getElementById("tbody");
+       tbody.innerHTML = "";
+
+       data.map((e)=>{
+        tbody.innerHTML += `
+        <tr id="tr">
+                    <td>${e.category}</td>
+                    <td>${e.image_url}</td>
+                    <td>${e.type_of_room}</td>
+                    <td>${e.bed_type}</td>
+                    <td>${e.no_of_persons}</td>
+                    <td>${e.capacity}</td>
+                    <td>${e.cost}</td>
+                    <td>${e.booked}</td>
+
+                </tr>
+        
+        `
+       })
     }
 </script>
