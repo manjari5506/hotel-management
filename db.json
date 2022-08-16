@@ -1,0 +1,22 @@
+{
+    "products": [
+        {
+            "name": "coke",
+            "price": 200
+        },
+        {
+            "name": "burger",
+            "price": 100
+        }
+    ],
+    "users": [
+        {
+            "name": "abc",
+            "age": 20
+        },
+        {
+            "name": "burger",
+            "age": 14
+        }
+    ]
+}
