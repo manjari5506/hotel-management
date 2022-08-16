@@ -40,16 +40,16 @@
             <br>
             <input type="number" id="cost" placeholder=" Cost per night"/>
             <br>
-            <input type="submit" value="Submit" id="s2"/>
+            <input type="submit" onclick="postData()" value="Submit" id="s2"/>
            </form>
     </div>
 </body>
 </html>
 <script>
-    var api = "https://hotel-manage1.herokuapp.com/api/data";
+    var api = "https://hotel-manage1.herokuapp.com/data";
 
     let form = document.getElementById("adminform");
-    form.addEventListener("submit", postData);
+    //form.addEventListener("submit", postData);
 
     function postData(e){
         e.preventDefault();
