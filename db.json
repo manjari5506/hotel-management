@@ -1,57 +1,84 @@
 {
-    "data": [
-        {
-            "category": "family",
-            "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9iwBm2ulky9tQ2IHs-goDmQRaFeC5UixjR4_lY6SDN-iWJ4xl_O3A4-XMzXDhuc0zWx0&usqp=CAU",
-            "type_of_room": "suite",
-            "bed_type": "double",
-                "no_of_persons":"2",
-                "capacity":"3",
-                "cost":"3000",
-                "booked":false
-        },
-        {
-            "category": "family",
-            "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9iwBm2ulky9tQ2IHs-goDmQRaFeC5UixjR4_lY6SDN-iWJ4xl_O3A4-XMzXDhuc0zWx0&usqp=CAU",
-            "type_of_room": "suite",
-            "bed_type": "double",
-                "no_of_persons":"2",
-                "capacity":"3",
-                "cost":"3000",
-                "booked":false
-        },
-        {
-            "category": "family",
-            "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9iwBm2ulky9tQ2IHs-goDmQRaFeC5UixjR4_lY6SDN-iWJ4xl_O3A4-XMzXDhuc0zWx0&usqp=CAU",
-            "type_of_room": "suite",
-            "bed_type": "double",
-                "no_of_persons":"2",
-                "capacity":"3",
-                "cost":"3000",
-                "booked":false
-        },
-        {
-            "category": "family",
-            "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9iwBm2ulky9tQ2IHs-goDmQRaFeC5UixjR4_lY6SDN-iWJ4xl_O3A4-XMzXDhuc0zWx0&usqp=CAU",
-            "type_of_room": "suite",
-            "bed_type": "double",
-                "no_of_persons":"2",
-                "capacity":"3",
-                "cost":"3000",
-                "booked":false
-        },
-        {
-            "category": "family",
-            "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9iwBm2ulky9tQ2IHs-goDmQRaFeC5UixjR4_lY6SDN-iWJ4xl_O3A4-XMzXDhuc0zWx0&usqp=CAU",
-            "type_of_room": "suite",
-            "bed_type": "double",
-                "no_of_persons":"2",
-                "capacity":"3",
-                "cost":"3000",
-                "booked":false
-        }
-    ],
+    
     "users": [
-       
+        {   "id": 1,
+            "name": "employee1",
+            "email": "employee1@gmail.com",
+            "username": "user1",
+            "mobile": "1268463935",
+            "description": "Full-stack developer" 
+          },
+          {
+            "id": 2,
+            "name": "employee2",
+            "email": "employee2@gmail.com",
+            "username": "user2",
+            "mobile": "1268463935",
+            "description": "Back-end developer"
+          },
+          {
+            "id": 3,
+            "name": "employee3",
+            "email": "employee3@gmail.com",
+            "username": "user3",
+            "mobile": "1268463935",
+            "description": "Full-stack developer"
+          },
+          {
+            "id": 4,
+            "name": "employee4",
+            "email": "employee4@gmail.com",
+            "username": "user4",
+            "mobile": "1268463935",
+            "description": "Full-stack developer"
+          },
+          {
+            "id": 5,
+            "name": "employee5",
+            "email": "employee5@gmail.com",
+            "username": "user5",
+            "mobile": "1268463935",
+            "description": "Full-stack developer"
+          },
+          {
+            "id": 6,
+            "name": "employee6",
+            "email": "employee6@gmail.com",
+            "username": "user6",
+            "mobile": "1268463935",
+            "description": "Front-end developer"
+          },
+          {
+            "id": 7,
+            "name": "employee7",
+            "email": "employee7@gmail.com",
+            "username": "user7",
+            "mobile": "1268463935",
+            "description": "Front-end developer"
+          },
+          {
+            "id": 8,
+            "name": "employee8",
+            "email": "employee8@gmail.com",
+            "username": "user8",
+            "mobile": "1268463935",
+            "description": "Back-end developer"
+          },
+          {
+            "id": 9,
+            "name": "employee9",
+            "email": "employee9@gmail.com",
+            "username": "user9",
+            "mobile": "1268673935",
+            "description": "Back-end developer"
+          },
+          {
+            "id": 10,
+            "name": "employee10",
+            "email": "employee10@gmail.com",
+            "username": "user10",
+            "mobile": "1264875639",
+            "description": "Front-end developer"
+          }
     ]
 }
